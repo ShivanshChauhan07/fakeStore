@@ -1,0 +1,24 @@
+<div
+  class="ring-1 ring-black/5 flex flex-col h-full p-3 rounded-lg shadow-md hover:-translate-y-1 hover:shadow-xl transition-all duration-300"
+>
+  <img class="h-36 w-36 mx-auto mt-2" [src]="card.image" alt="" />
+  <div class="flex-1 flex flex-col justify-around">
+    <h3 class="text-gray-900 font-[Playfair_Display] line-clamp-2">{{ card.title }}</h3>
+    <div class="flex justify-between font-[inter] text-sm">
+      <h3>{{ card.price }}</h3>
+      <h3>{{ card.rating.rate }}</h3>
+    </div>
+    <div class="flex justify-between">
+      <button
+        class="px-4 py-2 border border-gray-300 text-gray-700 rounded-md font-medium cursor-pointer hover:bg-gray-100"
+      >
+        <a [routerLink]="['/cart', card.id]"> Show More</a>
+      </button>
+      <button
+        class="px-4 py-2 bg-blue-600 text-white rounded-md font-medium cursor-pointer hover:bg-blue-700 active:scale-95"
+      >
+        Add to Cart
+      </button>
+    </div>
+  </div>
+</div>

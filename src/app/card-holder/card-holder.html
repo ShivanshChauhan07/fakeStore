@@ -1,0 +1,10 @@
+<div class="flex flex-wrap justify-evenly gap-2">
+  <div *ngIf="filteredProducts().length === 0" class="text-xl text-red-600">
+    <h1>No products found !</h1>
+  </div>
+  <app-shop-card
+    *ngFor="let card of filteredProducts(); let i = index"
+    [card]="card"
+    class="w-1/5 h-80"
+  ></app-shop-card>
+</div>

@@ -1,0 +1,30 @@
+<div class="flex p-4 justify-between">
+  <div class="w-3/4">
+    <input
+      class="border border-r-0 px-4 rounded-l-md border-gray-400 h-10 w-3/4"
+      type="text"
+      placeholder="Search Item here"
+      [(ngModel)]="searchItem"
+    />
+    <button
+      class="border border-l-0 border-gray-400 bg-blue-600 cursor-pointer text-white h-10 p-2 rounded-r-md hover:bg-blue-900"
+      (click)="onSearchChange()"
+    >
+      Search
+    </button>
+  </div>
+  <div class="flex items-center">
+    <h5>Sort By:</h5>
+    <select
+      class="bg-gray-50 p-1 border border-gray-100 text-sm rounded-lg"
+      name="sort"
+      id="sort"
+      [(ngModel)]="selectBox"
+      (ngModelChange)="onSelectChange()"
+    >
+      <option [ngValue]="0">Price: Low to High</option>
+      <option [ngValue]="1">Price: High to Low</option>
+      <option [ngValue]="2">Rating</option>
+    </select>
+  </div>
+</div>

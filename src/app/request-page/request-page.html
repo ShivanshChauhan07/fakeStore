@@ -1,0 +1,93 @@
+<div class="max-w-2xl mx-auto p-6 mt-6 border rounded-lg shadow-sm">
+  <h2 class="text-2xl font-semibold mb-6 text-center">Add New Product</h2>
+
+  <form class="space-y-4" (ngSubmit)="onSubmit()">
+    <div>
+      <label class="block text-sm font-medium mb-1">Title</label>
+      <input
+        name="title"
+        type="text"
+        placeholder="Product title"
+        class="w-full px-3 py-2 border rounded focus:outline-none focus:ring focus:ring-blue-300"
+        [(ngModel)]="formData.title"
+      />
+    </div>
+
+    <div>
+      <label class="block text-sm font-medium mb-1">Price</label>
+      <input
+        name="price"
+        type="number"
+        step="0.01"
+        placeholder="109.95"
+        class="w-full px-3 py-2 border rounded focus:outline-none focus:ring focus:ring-blue-300"
+        [(ngModel)]="formData.price"
+      />
+    </div>
+
+    <div>
+      <label class="block text-sm font-medium mb-1">Category</label>
+      <input
+        name="category"
+        type="text"
+        placeholder="men's clothing"
+        class="w-full px-3 py-2 border rounded focus:outline-none focus:ring focus:ring-blue-300"
+        [(ngModel)]="formData.category"
+      />
+    </div>
+
+    <div>
+      <label class="block text-sm font-medium mb-1">Image URL</label>
+      <input
+        name="image"
+        type="url"
+        placeholder="https://example.com/image.png"
+        class="w-full px-3 py-2 border rounded focus:outline-none focus:ring focus:ring-blue-300"
+        [(ngModel)]="formData.image"
+      />
+    </div>
+
+    <div>
+      <label class="block text-sm font-medium mb-1">Description</label>
+      <textarea
+        name="description"
+        rows="4"
+        placeholder="Product description"
+        class="w-full px-3 py-2 border rounded focus:outline-none focus:ring focus:ring-blue-300"
+        [(ngModel)]="formData.description"
+      ></textarea>
+    </div>
+
+    <div class="grid grid-cols-2 gap-4">
+      <div>
+        <label class="block text-sm font-medium mb-1">Rating</label>
+        <input
+          name="rating"
+          type="number"
+          step="0.1"
+          placeholder="3.9"
+          class="w-full px-3 py-2 border rounded focus:outline-none focus:ring focus:ring-blue-300"
+          [(ngModel)]="formData.rating.rate"
+        />
+      </div>
+
+      <div>
+        <label class="block text-sm font-medium mb-1">Rating Count</label>
+        <input
+          name="ratingCount"
+          type="number"
+          placeholder="120"
+          class="w-full px-3 py-2 border rounded focus:outline-none focus:ring focus:ring-blue-300"
+          [(ngModel)]="formData.rating.count"
+        />
+      </div>
+    </div>
+
+    <button
+      type="submit"
+      class="w-full mt-4 bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition"
+    >
+      Add Product
+    </button>
+  </form>
+</div>

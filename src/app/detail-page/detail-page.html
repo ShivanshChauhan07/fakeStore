@@ -1,0 +1,71 @@
+<div class="max-w-5xl mx-auto p-6 mt-6">
+  <div class="flex items-center justify-between mb-6">
+    <h1 class="text-2xl font-bold text-gray-800">Product Details</h1>
+
+    <a routerLink="/" class="px-4 py-2 border rounded hover:bg-gray-50 transition text-sm">
+      ← Back
+    </a>
+  </div>
+
+  <div class="border rounded-lg shadow-sm p-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div class="flex items-center justify-center border rounded-lg p-4 bg-white">
+        <img
+          [src]="productFromStore()?.image"
+          alt="Product image"
+          class="max-h-96 object-contain"
+        />
+      </div>
+
+      <div class="space-y-4">
+        <div>
+          <p class="text-sm text-gray-500">Category</p>
+          <p class="inline-block mt-1 text-sm px-3 py-1 rounded bg-gray-100 text-gray-700">
+            {{ productFromStore()?.category }}
+          </p>
+        </div>
+
+        <h2 class="text-2xl font-semibold text-gray-800">
+          {{ productFromStore()?.title }}
+        </h2>
+
+        <div class="flex items-center gap-3">
+          <div class="flex items-center gap-1 text-yellow-600">
+            <span class="text-lg font-semibold">{{ productFromStore()?.rating?.rate }}</span>
+            <span class="text-sm text-gray-500">/ 5</span>
+          </div>
+          <span class="text-sm text-gray-500"
+            >({{ productFromStore()?.rating?.count }} reviews)</span
+          >
+        </div>
+
+        <div class="text-3xl font-bold text-gray-900">₹{{ productFromStore()?.price }}</div>
+
+        <div class="pt-2">
+          <h3 class="text-lg font-semibold text-gray-800 mb-2">Description</h3>
+          <p class="text-gray-600 leading-relaxed">
+            {{ productFromStore()?.description }}
+          </p>
+        </div>
+
+        <div class="pt-4 flex flex-col sm:flex-row gap-3">
+          <button
+            class="w-full sm:w-auto px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition"
+          >
+            Add to Cart
+          </button>
+
+          <button class="w-full sm:w-auto px-6 py-2 border rounded hover:bg-gray-50 transition">
+            Buy Now
+          </button>
+        </div>
+
+        <div class="pt-3 text-sm text-gray-500">
+          <p>
+            <span class="font-medium text-gray-700">Product ID:</span> {{ productFromStore()?.id }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

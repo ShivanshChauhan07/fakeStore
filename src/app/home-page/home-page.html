@@ -1,0 +1,6 @@
+<app-search-bar
+  (searchChange)="onSearchChange($event)"
+  (selectChange)="onSelectChange($event)"
+></app-search-bar>
+
+<app-card-holder [searchText]="searchText()" [selectBox]="selectBox()"></app-card-holder>

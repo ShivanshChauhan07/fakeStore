@@ -1,7 +1,7 @@
-<div class="flex p-4 justify-between">
+<div class="flex flex-col gap-3 p-4 sm:flex-row sm:items-center sm:justify-between">
   <div class="w-3/4">
     <input
-      class="border border-r-0 px-4 rounded-l-md border-gray-400 h-10 w-3/4"
+      class="border border-r-0 px-4 rounded-l-md border-gray-400 h-10 w-3/4 flex-1"
       type="text"
       placeholder="Search Item here"
       [(ngModel)]="searchItem"
@@ -16,7 +16,7 @@
   <div class="flex items-center">
     <h5>Sort By:</h5>
     <select
-      class="bg-gray-50 p-1 border border-gray-100 text-sm rounded-lg"
+      class="bg-gray-50 p-1 border text-sm rounded-lg w-full sm:w-auto"
       name="sort"
       id="sort"
       [(ngModel)]="selectBox"

@@ -20,9 +20,10 @@ export class RequestPage {
     rating: { rate: 0, count: 0 },
   };
 
-  onSubmit() {
+  onSubmit(f: any) {
     return this.apiService.postProduct(this.formData).subscribe((response) => {
-      console.log('Product added successfully:', JSON.stringify(response));
+      alert('Product added successfully:' + JSON.stringify(response));
+      f.resetForm();
     });
   }
 }

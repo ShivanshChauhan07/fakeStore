@@ -1,7 +1,7 @@
 <div class="max-w-2xl mx-auto p-6 mt-6 border rounded-lg shadow-sm">
   <h2 class="text-2xl font-semibold mb-6 text-center">Add New Product</h2>
 
-  <form class="space-y-4" (ngSubmit)="onSubmit()">
+  <form class="space-y-4" #f="ngForm" (ngSubmit)="onSubmit(f)">
     <div>
       <label class="block text-sm font-medium mb-1">Title</label>
       <input

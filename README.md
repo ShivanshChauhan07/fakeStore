@@ -10,3 +10,5 @@ This project was generated using [Angular CLI](https://github.com/angular/angula
 
 - **To display the original product list again, click the Search button with an empty input field.**
 
+- **To display the Reqeust Form Successful POST CALL PLS SEE CONSOLE.LOG**
+

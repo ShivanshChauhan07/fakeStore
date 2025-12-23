@@ -5,6 +5,7 @@
       type="text"
       placeholder="Search Item here"
       [(ngModel)]="searchItem"
+      (ngModelChange)="searchItem === '' && onSearchChange()"
     />
     <button
       class="border border-l-0 border-gray-400 bg-blue-600 cursor-pointer text-white h-10 p-2 rounded-r-md hover:bg-blue-900"
